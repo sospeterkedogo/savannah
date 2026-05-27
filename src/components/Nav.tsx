@@ -17,7 +17,7 @@ export default function Nav() {
     <nav className="sticky top-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-between px-6 py-3 border-b border-luxury-accent shadow-lg">
       <div className="flex items-center gap-3">
         <Link href="/" aria-label="Savannah Home" tabIndex={0} className="focus:outline-none focus:ring-2 focus:ring-luxury-accent rounded">
-          <Image src="logo.svg" alt="Savannah Logo" width={48} height={48} className="rounded" priority />
+          <Image src="/images/logo.png" alt="Savannah Logo" width={48} height={48} className="rounded" priority />
         </Link>
         <span className="hidden sm:inline font-serif text-3xl text-luxury-accent font-bold ml-3 tracking-wider drop-shadow-lg" style={{fontFamily: 'Playfair Display, serif'}}>Savannah</span>
       </div>
