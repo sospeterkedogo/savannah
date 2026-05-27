@@ -29,7 +29,7 @@ export default function Nav() {
         ))}
         <Link href="/book" className="ml-6 px-7 py-2 bg-gradient-to-r from-luxury-accent to-yellow-400 text-black rounded-full font-bold shadow-lg hover:scale-105 focus:scale-105 transition-transform ring-2 ring-luxury-accent/60" aria-label="Reserve a Table">Reserve</Link>
       </div>
-      {/* Hamburger Button */}
+      {/* Hamburger Button - only visible on mobile */}
       <button
         className={`md:hidden flex flex-col gap-1.5 p-2 focus:outline-none focus:ring-2 focus:ring-luxury-accent transition-transform ${open ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
         aria-label="Open menu"
@@ -40,37 +40,39 @@ export default function Nav() {
         <span className="block w-7 h-1 bg-luxury-accent rounded transition-all"></span>
         <span className="block w-7 h-1 bg-luxury-accent rounded transition-all"></span>
       </button>
-      {/* Slide-in Mobile Nav */}
-      <div
-        className={`fixed inset-0 z-50 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${open ? 'pointer-events-auto' : 'pointer-events-none'}`}
-        aria-hidden={!open}
-      >
-        {/* Overlay */}
+      {/* Mobile Nav Drawer - only rendered when open */}
+      {open && (
         <div
-          className={`absolute inset-0 bg-black/90 transition-opacity duration-500 ${open ? 'opacity-100' : 'opacity-0'}`}
-          onClick={() => setOpen(false)}
-        />
-        {/* Drawer */}
-        <aside
-          className={`absolute right-0 top-0 h-full w-full sm:w-[420px] bg-black flex flex-col items-center justify-center gap-10 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${open ? 'translate-x-0' : 'translate-x-full'} luxury-fade-in`}
-          style={{ zIndex: 60 }}
+          className="fixed inset-0 z-50 pointer-events-auto"
+          aria-hidden={!open}
         >
-          <button
-            className="absolute top-6 right-6 text-luxury-accent text-5xl font-bold focus:outline-none focus:ring-2 focus:ring-luxury-accent"
-            aria-label="Close menu"
+          {/* Overlay */}
+          <div
+            className="absolute inset-0 bg-black/90 transition-opacity duration-500 opacity-100"
             onClick={() => setOpen(false)}
-            tabIndex={0}
+          />
+          {/* Drawer */}
+          <aside
+            className="absolute right-0 top-0 h-full w-full sm:w-[420px] bg-black flex flex-col items-center justify-center gap-10 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] translate-x-0 luxury-fade-in"
+            style={{ zIndex: 60 }}
           >
-            ×
-          </button>
-          {navLinks.map(link => (
-            <Link key={link.href} href={link.href} className="text-4xl font-serif text-luxury-accent hover:text-white focus:text-white transition-colors mb-2" onClick={() => setOpen(false)}>
-              {link.label}
-            </Link>
-          ))}
-          <Link href="/book" className="mt-8 px-12 py-4 bg-gradient-to-r from-luxury-accent to-yellow-400 text-black rounded-full font-bold text-3xl shadow-xl hover:scale-105 focus:scale-105 transition-transform ring-2 ring-luxury-accent/60" aria-label="Reserve a Table" onClick={() => setOpen(false)}>Reserve</Link>
-        </aside>
-      </div>
+            <button
+              className="absolute top-6 right-6 text-luxury-accent text-5xl font-bold focus:outline-none focus:ring-2 focus:ring-luxury-accent"
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+              tabIndex={0}
+            >
+              ×
+            </button>
+            {navLinks.map(link => (
+              <Link key={link.href} href={link.href} className="text-4xl font-serif text-luxury-accent hover:text-white focus:text-white transition-colors mb-2" onClick={() => setOpen(false)}>
+                {link.label}
+              </Link>
+            ))}
+            <Link href="/book" className="mt-8 px-12 py-4 bg-gradient-to-r from-luxury-accent to-yellow-400 text-black rounded-full font-bold text-3xl shadow-xl hover:scale-105 focus:scale-105 transition-transform ring-2 ring-luxury-accent/60" aria-label="Reserve a Table" onClick={() => setOpen(false)}>Reserve</Link>
+          </aside>
+        </div>
+      )}
     </nav>
   );
 }
