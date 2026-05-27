@@ -1,6 +1,6 @@
 # Savannah Next.js App
 
-Production: https://savannah.vercel.app
+Production: https://savannahnorth.vercel.app
 
 ## Stack
 - Next.js 16 (App Router)
