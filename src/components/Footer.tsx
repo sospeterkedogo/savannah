@@ -8,16 +8,16 @@ export default function Footer() {
         {/* Left: Contact & Address */}
         <div className="flex-1 flex flex-col items-center md:items-start mb-10 md:mb-0">
           <h2 className="text-xl font-serif text-luxury-accent font-bold mb-2 tracking-wide uppercase">Visit Us</h2>
-          <p className="text-white/90 mb-1">123 Main Street</p>
-          <p className="text-white/90 mb-1">Savannah, GA 31401</p>
-          <p className="text-white/70 mb-1">(912) 555-1234</p>
+          <p className="text-white/90 mb-1">123 Wellingborough Road</p>
+          <p className="text-white/90 mb-1">Northampton, NN1 4AB</p>
+          <p className="text-white/70 mb-1">(912) 234-1234</p>
           <p className="text-white/70 mb-1">info@savannahbarandgrill.com</p>
         </div>
 
         {/* Center: Socials & Brand */}
         <div className="flex-1 flex flex-col items-center justify-center mb-10 md:mb-0">
           <Image src="/images/logo.png" alt="Savannah Logo" width={56} height={56} className="rounded mb-3 shadow-lg" />
-          <span className="font-serif text-2xl text-luxury-accent font-bold tracking-wider mb-2">Savannah</span>
+          <span className="font-serif text-2xl text-luxury-accent font-bold tracking-wider mb-2">SavannahB&G</span>
           <div className="flex gap-5 text-luxury-accent text-2xl mb-2 mt-2">
             <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" className="hover:text-yellow-400 transition-colors"><FaInstagram /></a>
             <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" className="hover:text-yellow-400 transition-colors"><FaFacebookF /></a>
@@ -45,7 +45,7 @@ export default function Footer() {
       </div>
       <div className="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between mt-10 pt-6 border-t border-luxury-accent/20">
         <span className="text-xs text-white/40">&copy; 2026 Savannah Bar & Grill. All rights reserved.</span>
-        <span className="text-xs text-white/30 mt-2 md:mt-0">Designed for a luxury experience.</span>
+        <span className="text-xs text-white/30 mt-2 md:mt-0">Designed & Developed by dev Pete</span>
       </div>
     </footer>
   );
