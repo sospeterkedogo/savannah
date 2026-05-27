@@ -1,0 +1,42 @@
+/* Luxury micro-interactions and animations */
+.luxury-cta {
+	@apply transition-transform duration-200 ease-in-out shadow-xl hover:scale-105 focus:scale-105 hover:shadow-2xl focus:shadow-2xl;
+}
+ .luxury-card {
+	@apply transition-transform duration-200 ease-in-out hover:scale-105 focus:scale-105 hover:shadow-2xl focus:shadow-2xl;
+}
+.luxury-fade-in {
+	animation: luxury-fade-in 1s cubic-bezier(0.4,0,0.2,1) both;
+}
+@keyframes luxury-fade-in {
+	from { opacity: 0; transform: translateY(32px); }
+	to { opacity: 1; transform: none; }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	font-family: 'Inter', 'Lato', sans-serif;
+	background: theme('colors.luxury.bg');
+	color: theme('colors.luxury.surface');
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Playfair Display', serif;
+	letter-spacing: 0.01em;
+}
+
+a {
+	@apply transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-luxury-accent;
+}
+
+button, .btn {
+	@apply rounded-lg font-semibold focus:outline-none focus:ring-2 focus:ring-luxury-accent;
+}
+
+/* WCAG focus state */
+:focus-visible {
+	outline: 2px solid #d4af37;
+	outline-offset: 2px;
+}
