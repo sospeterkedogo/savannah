@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { FaInstagram, FaFacebookF, FaXTwitter, FaTiktok, FaYoutube } from './HighEndIcons';
 
 export default function Footer() {
   return (
@@ -9,6 +10,16 @@ export default function Footer() {
         <p className="text-white/60">(912) 555-1234</p>
         <p className="text-white/60">info@savannahbarandgrill.com</p>
         <p className="text-white/40 text-xs mt-2">&copy; 2026 Savannah Bar & Grill. All rights reserved.</p>
+      </div>
+      <div className="flex flex-col items-center mt-8 gap-2">
+        <div className="flex gap-5 text-luxury-accent text-2xl">
+          <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><FaInstagram /></a>
+          <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><FaFacebookF /></a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="X / Twitter"><FaXTwitter /></a>
+          <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><FaTiktok /></a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><FaYoutube /></a>
+        </div>
+        <span className="text-xs text-white/40">Follow us for updates & events</span>
       </div>
       <div className="flex-1 flex flex-col items-center">
         <h2 className="text-2xl font-serif text-luxury-accent font-bold mb-2">Find Us on the Map</h2>

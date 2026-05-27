@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaMedal, FaUtensils, FaStar } from 'react-icons/fa6';
 
 export default function Home() {
   return (
@@ -28,9 +29,15 @@ export default function Home() {
           </Link>
         </div>
         <div className="flex flex-wrap gap-6 mt-16 animate-fade-in-up delay-500 justify-center w-full" aria-label="Awards and Press Mentions">
-          <span className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-luxury-accent to-yellow-400 text-black rounded-full font-semibold text-xl shadow-xl">★ Michelin Guide</span>
-          <span className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-luxury-accent to-yellow-400 text-black rounded-full font-semibold text-xl shadow-xl">🏆 Best New Restaurant 2026</span>
-          <span className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-luxury-accent to-yellow-400 text-black rounded-full font-semibold text-xl shadow-xl">🍽️ Featured in Gourmet</span>
+          <span className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-luxury-accent to-yellow-400 text-black rounded-full font-semibold text-xl shadow-xl">
+            <FaStar className="text-2xl" /> Michelin Guide
+          </span>
+          <span className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-luxury-accent to-yellow-400 text-black rounded-full font-semibold text-xl shadow-xl">
+            <FaMedal className="text-2xl" /> Best New Restaurant 2026
+          </span>
+          <span className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-luxury-accent to-yellow-400 text-black rounded-full font-semibold text-xl shadow-xl">
+            <FaUtensils className="text-2xl" /> Featured in Gourmet
+          </span>
         </div>
       </div>
     </section>

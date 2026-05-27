@@ -8,6 +8,7 @@ const navLinks = [
   { href: '/contact', label: 'Contact' },
   { href: '/hours', label: 'Hours' },
   { href: '/info', label: 'Info' },
+  { href: '/events', label: 'Events & Updates' },
   { href: '/legal', label: 'Legal' },
 ];
 
