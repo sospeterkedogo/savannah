@@ -54,7 +54,7 @@ export default function Nav() {
           />
           {/* Drawer */}
           <aside
-            className="absolute right-0 top-0 h-full w-full sm:w-[420px] bg-black flex flex-col items-center justify-center gap-10 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] translate-x-0 luxury-fade-in"
+            className="absolute right-0 top-0 h-full w-full sm:w-[420px] bg-black/90 backdrop-blur-lg rounded-l-3xl flex flex-col items-center justify-center gap-10 shadow-2xl transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] translate-x-0 luxury-fade-in"
             style={{ zIndex: 60 }}
           >
             <button
